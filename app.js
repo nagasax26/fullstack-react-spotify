@@ -14,9 +14,11 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var path = require('path');
 const urlWebSite = 'https://react-spotify-design.herokuapp.com'
-var client_id = '8412e15e2a844069936302487fa0944d'; // Your client id
-var client_secret = '495cc92685e248548c593f2bdeac40a5'; // Your secret
+var client_id = process.env.CLIENT_ID; // Your client id
+var client_secret = process.env.CLIENT_SECRET; // Your secret
 var redirect_uri = `${urlWebSite}/callback`; // Your redirect uri
+
+require('dotenv').config();
 
 /**
  * Generates a random string containing numbers and letters
