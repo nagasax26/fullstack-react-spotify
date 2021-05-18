@@ -17,7 +17,7 @@ class Header extends Component {
                     <span className="icon-logo-name">Spotify</span>
                 </div>
                 <div>
-                    <a className="login-button" href='http://localhost:8888/login'>LOGIN</a>
+                    <a className="login-button" href='https://react-spotify-design.herokuapp.com/login'>LOGIN</a>
                 </div>
                 <Search
                     apiUrl={this.props.apiUrl}
