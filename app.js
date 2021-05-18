@@ -13,12 +13,14 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var path = require('path');
-const urlWebSite = 'https://react-spotify-design.herokuapp.com'
+// Load Env variables
+require('dotenv').config();
+
+const urlWebSite = process.env.URL_WEBSITE;
 var client_id = process.env.CLIENT_ID; // Your client id
 var client_secret = process.env.CLIENT_SECRET; // Your secret
-var redirect_uri = `${urlWebSite}/callback`; // Your redirect uri
+var redirect_uri = process.env.REDIRECT_URI; // Your redirect uri
 
-require('dotenv').config();
 
 /**
  * Generates a random string containing numbers and letters

@@ -215,12 +215,30 @@ body {
 }
 
 .player__img-box{
-  position: relative;  
+  position: relative;
+  outline: 2px solid rgba(255,255,255, 0.4);
+}
+
+.player__img-box::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+  radial-gradient(circle at 50% -20.71%, #00acff 0, #00a8ff 5%, #00a2ff 10%, #009bff 15%, #0093ff 20%, #0089ff 25%, #5f7eff 30%, #9771ff 35%, #bd62ff 40%, #da51ff 45%, #f23cf2 50%, #ff1fdd 55%, #ff00c6 60%, #ff00af 65%, #ff0098 70%, #ff0081 75%, #ff006b 80%, #ff0054 85%, #ff123e 90%, #ff3425 95%, #ff4900 100%),
+  /* radial-gradient(circle at 100% 0%, #f662d9 0, #ff5bc8 4.55%, #ff55b7 9.09%, #ff51a6 13.64%, #ff4f94 18.18%, #ff5183 22.73%, #ff5572 27.27%, #ff5b61 31.82%, #ff6251 36.36%, #ff6a41 40.91%, #fd7331 45.45%, #f37b1f 50%, #e88305 54.55%, #db8a00 59.09%, #cd9100 63.64%, #bf9800 68.18%, #af9d00 72.73%, #9fa300 77.27%, #8ea700 81.82%, #7bab00 86.36%, #66af15 90.91%, #4cb12c 95.45%, #24b43e 100%), */
+  linear-gradient(90deg, transparent, rgba(0, 0, 0, 1) 50%, transparent);
+  box-shadow: 0 0 15px rgba(255,255,255, 0.4);
+  filter: blur(5px);
 }
 
 .player__img{
   width: 100%;
   filter: opacity(.65);
+  display: block;
 }
 
 .player__artist{
@@ -357,4 +375,17 @@ body {
 
 .loader{
   text-align: center;
+}
+
+.login-button{
+  color: rgba(0, 0, 0, 0.7);
+  background-color: white;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 16px;
+  margin-left: 28px;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+
 }
